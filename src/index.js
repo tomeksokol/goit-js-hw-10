@@ -51,7 +51,7 @@ function renderCountryList(name) {
   const markup = name
     .map(country => {
       return `<li class="country__list">
-          <img class="flag__img" src="${country.flags[0]}" alt="Flag of ${country.name}" width="50" height="30"><span class="country__name">${country.name}</span></img>
+          <img class="flag__img" src="${country.flags.svg}" alt="Flag of ${country.name}" width="50" height="30"><span class="country__name">${country.name}</span></img>
         </li>`;
     })
     .join('');
@@ -62,7 +62,7 @@ function renderCountryInfo(name) {
   const markup = name
     .map(country => {
       return `<li class="country__info">
-          <img class="flag__img" src="${country.flags[0]}" alt="Flag of ${
+          <img class="flag__img" src="${country.flags.svg}" alt="Flag of ${
         country.name
       }" width="50" height="30"><span class="country__name">${country.name}</span></img>
           <p><b>Capital</b>: ${country.capital}</p>
